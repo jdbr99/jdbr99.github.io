@@ -1,0 +1,23 @@
+---
+export interface Props {
+    options: Array<string>,
+    selected: string,
+}
+
+const { options, selected } = Astro.props as Props;
+---
+
+<div class="navbar">
+    {options.map((opt) => (
+    <a href={`/${opt}`} class={`nav-item ${selected===opt ? "selected" : "" }`}>
+        {opt}
+    </a>
+    ))}
+    <!-- <a href="/" class="nav-item selected">
+        About
+    </a><a href="/blog" class="nav-item">
+        Blog
+    </a><a href="/portfolio" class="nav-item">
+        Portfolio
+    </a> -->
+</div>
