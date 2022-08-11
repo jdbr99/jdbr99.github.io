@@ -7,17 +7,37 @@ export interface Props {
 const { options, selected } = Astro.props as Props;
 ---
 
+<style>
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: x-large;
+        width: 100%;
+        background-color: #f5f5f5;
+        position: fixed
+    }
+
+    .nav-item {
+        text-decoration: none;
+        margin: 1rem;
+        color: #000
+    }
+
+    .nav-item:hover {
+        color: gray
+    }
+
+    .selected {
+        font-weight: 600
+    }
+</style>
+
 <div class="navbar">
     {options.map((opt) => (
     <a href={`/${opt}`} class={`nav-item ${selected===opt ? "selected" : "" }`}>
         {opt}
     </a>
     ))}
-    <!-- <a href="/" class="nav-item selected">
-        About
-    </a><a href="/blog" class="nav-item">
-        Blog
-    </a><a href="/portfolio" class="nav-item">
-        Portfolio
-    </a> -->
 </div>
