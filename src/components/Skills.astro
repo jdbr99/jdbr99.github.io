@@ -1,0 +1,34 @@
+<style>
+    .skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+    }
+
+    .skills-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    @media(max-width: 1000px) {
+        .timeline {
+            width: 100%;
+        }
+    }
+
+    h2 {
+        width: 100%;
+        text-align: left;
+    }
+</style>
+
+<div class="skills">
+    <h2 class="title">Skills</h2>
+    <div class="skills-list">
+        <slot />
+    </div>
+</div>

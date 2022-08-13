@@ -3,6 +3,8 @@ import Page from '../components/Page.astro';
 import Hero from '../components/Hero.astro';
 import Timeline from '../components/Timeline.astro';
 import TimelineItem from '../components/TimelineItem.astro';
+import Skills from '../components/Skills.astro';
+import Skill from '../components/Skill.astro';
 ---
 
 <Page options={["About", "Blog" , "Portfolio" ]} selected="About" title="David Bolaños">
@@ -38,4 +40,15 @@ import TimelineItem from '../components/TimelineItem.astro';
 			<br />DOI: TBD
 		</TimelineItem>
 	</Timeline>
+	<Skills>
+		<Skill img="python-original.svg" title="Python">
+			Data science and web development.
+		</Skill>
+		<Skill img="typescript-original.svg" title="Typescript">
+			Backend and frontend development.
+		</Skill>
+		<Skill img="git-original.svg" title="Git">
+			Version control with git and Github.
+		</Skill>
+	</Skills>
 </Page>
