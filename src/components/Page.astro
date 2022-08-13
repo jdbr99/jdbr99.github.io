@@ -1,7 +1,37 @@
 ---
+import Footer from "./Footer.astro";
+import Navbar from "./Navbar.astro";
 
+export interface Props {
+    options: Array<string>,
+    selected: string,
+}
+
+const { options, selected } = Astro.props as Props;
 ---
 
+<style>
+    @import"https://fonts.googleapis.com/css?family=Montserrat:200,400,600,700";
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 5% auto 0 auto
+    }
+
+    * {
+        font-family: 'Montserrat';
+        scroll-behavior: smooth
+    }
+</style>
 <html lang="en">
 
 <head>
@@ -9,22 +39,19 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
-    <style>
-        @import"https://fonts.googleapis.com/css?family=Montserrat:200,400,600,700";
-
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        * {
-            font-family: 'Montserrat';
-        }
-    </style>
 </head>
 
+
 <body>
-    <slot />
+    <header>
+        <Navbar options={options} selected={selected} />
+    </header>
+    <main>
+        <div class="content">
+            <slot />
+        </div>
+    </main>
+    <Footer />
 </body>
 
 </html>
