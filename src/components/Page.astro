@@ -5,9 +5,10 @@ import Navbar from "./Navbar.astro";
 export interface Props {
     options: Array<string>,
     selected: string,
+    title?: string
 }
 
-const { options, selected } = Astro.props as Props;
+const { options, selected, title = selected } = Astro.props as Props;
 ---
 
 <style>
@@ -24,7 +25,7 @@ const { options, selected } = Astro.props as Props;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 5% auto 0 auto
+        margin: 5% auto 0 auto;
     }
 
     * {
@@ -38,7 +39,7 @@ const { options, selected } = Astro.props as Props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>{title}</title>
 </head>
 
 

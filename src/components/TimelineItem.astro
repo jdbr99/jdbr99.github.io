@@ -1,0 +1,46 @@
+---
+export interface Props {
+    title: string,
+    img: string,
+    period: string,
+};
+
+const { title, img, period } = Astro.props as Props;
+---
+
+<style>
+    .timeline-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+        width: 70%;
+        margin: 0 auto 20px auto;
+    }
+
+    img {
+        width: 40%
+    }
+
+    * {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .period {
+        color: #6b6b6b;
+    }
+
+    p {
+        text-align: center;
+    }
+</style>
+
+<div class="timeline-item">
+    <img src={img} alt="company logo">
+    <h3 class="title">{title}</h3>
+    <p class="period">{period}</p>
+    <p class="description">
+        <slot />
+    </p>
+</div>

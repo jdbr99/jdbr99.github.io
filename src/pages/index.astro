@@ -1,8 +1,20 @@
 ---
 import Page from '../components/Page.astro';
 import Hero from '../components/Hero.astro';
+import Timeline from '../components/Timeline.astro';
+import TimelineItem from '../components/TimelineItem.astro';
 ---
 
-<Page options={["About", "Blog" , "Portfolio" ]} selected="About">
+<Page options={["About", "Blog" , "Portfolio" ]} selected="About" title="David Bolaños">
 	<Hero />
+	<Timeline title="Experience">
+		<TimelineItem img="rango_logo.svg" period="Apr 2021 - Apr 2022" title="Lead Backend Developer 💻">
+			<a href="https://rango.dev">Rango.dev</a>
+			's backend developer for JAMstack and full-stack applications.
+		</TimelineItem>
+		<TimelineItem img="ug.png" period="Aug 2019 - Dec 2019" title="Python Instructor">
+			Python for scientific computing instructor at the Natural and Exact Sciences faculty of the University of
+			Guanajuato.
+		</TimelineItem>
+	</Timeline>
 </Page>
