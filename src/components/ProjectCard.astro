@@ -10,12 +10,21 @@ const {title, date, description, thumbnail} = Astro.props as Props;
 ---
 
 <style>
-    div {
+    .project-card {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
+        width: 50%;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 1000px) {
+        .project-card {
+            width: 100%;
+            margin: 1rem auto 1rem auto;
+        }
     }
     img {
         width: 50%;
