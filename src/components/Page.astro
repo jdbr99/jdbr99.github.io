@@ -3,16 +3,16 @@ import Footer from "./Footer.astro";
 import Navbar from "./Navbar.astro";
 
 export interface Props {
-    options: Array<string>,
-    selected: string,
-    title?: string
+    options: Array<string>;
+    selected: string;
+    title?: string;
 }
 
 const { options, selected, title = selected } = Astro.props as Props;
 ---
 
 <style>
-    @import"https://fonts.googleapis.com/css?family=Montserrat:200,400,600,700";
+    @import "https://fonts.googleapis.com/css?family=Montserrat:200,400,600,700";
 
     body {
         margin: 0;
@@ -28,20 +28,23 @@ const { options, selected, title = selected } = Astro.props as Props;
         margin: 5% auto 0 auto;
     }
 
+    @media (max-width: 1000px) {
+        .content {
+            width: 90%;
+            margin-top: 15%;
+        }
+    }
+
     * {
-        font-family: 'Montserrat';
-        scroll-behavior: smooth
+        font-family: "Montserrat";
+        scroll-behavior: smooth;
     }
 </style>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-</head>
-
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+<title>{title}</title>
 
 <body>
     <header>
@@ -54,5 +57,3 @@ const { options, selected, title = selected } = Astro.props as Props;
     </main>
     <Footer />
 </body>
-
-</html>

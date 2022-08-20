@@ -1,8 +1,8 @@
 ---
 export interface Props {
-    title: string
-    img: string
-};
+    title: string;
+    img: string;
+}
 
 const { title, img } = Astro.props as Props;
 ---
@@ -20,13 +20,19 @@ const { title, img } = Astro.props as Props;
         width: 50%;
     }
 
+    @media (max-width: 1000px) {
+        .skill {
+            width: 80%;
+        }
+    }
+
     img {
         width: 30%;
     }
 </style>
 
 <div class="skill">
-    <img src={img} alt={`${title} logo`}>
+    <img src={img} alt={`${title} logo`} />
     <h3 class="title">{title}</h3>
     <p class="description">
         <slot />

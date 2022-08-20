@@ -1,8 +1,25 @@
 ---
-import Page from "../../components/Page.astro"
-
+import Page from "../../components/Page.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
 ---
 
-<Page options={["About", "Blog" , "Portfolio" ]} selected="Portfolio">
-    <h1>Coming soon!</h1>
+<style>
+    .projects-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+    }
+</style>
+
+<Page options={["About", "Blog", "Portfolio"]} selected="Portfolio">
+    <div class="projects-list">
+        <ProjectCard
+            title="Kluü's backend development"
+            thumbnail="/projects/kluu/kluu_screenshot.png"
+            date="Nov 2021 - Apr 2022"
+            description="Test of a description"
+        />
+    </div>
 </Page>
