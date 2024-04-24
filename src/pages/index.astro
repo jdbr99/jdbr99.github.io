@@ -15,12 +15,28 @@ import Skill from "../components/Skill.astro";
 	<Hero />
 	<Timeline title="Experience">
 		<TimelineItem
+			img="/ellucian.svg"
+			period="Aug 2023 - Present"
+			title="Software Engineer"
+		>
+			Software engineer at <a href="https://www.ellucian.com/">Ellucian</a>.
+			Fullstack developer in PowerCampus team.
+		</TimelineItem>
+		<TimelineItem
+			img="/ellucian.svg"
+			period="Jan 2023 - Aug 2023"
+			title="R&D Intern"
+		>
+			R&D intern at <a href="https://www.ellucian.com/">Ellucian</a>.
+			Worked in data migration pipeline for migration to SaaS services and in fixing accessibility issues in PowerCampus products.
+		</TimelineItem>
+		<TimelineItem
 			img="/rango_logo.svg"
 			period="Apr 2021 - Apr 2022"
 			title="Lead Backend Developer 💻"
 		>
 			<a href="https://rango.dev">Rango.dev</a>
-			's backend developer for JAMstack and full-stack applications.
+			's backend developer for JAMstack and fullstack applications.
 		</TimelineItem>
 		<TimelineItem
 			img="/ug.png"
@@ -34,7 +50,7 @@ import Skill from "../components/Skill.astro";
 	<Timeline title="Leadership">
 		<TimelineItem
 			img="/mlsa-badge.png"
-			period="Jul 2021 - Present"
+			period="Jul 2021 - Jun 2024"
 			title="Microsoft Learn Student Ambassador (Beta)"
 		>
 			Beta MLSA. In charge of organizing events, mentoring new
@@ -52,12 +68,14 @@ import Skill from "../components/Skill.astro";
 	<Timeline title="Research">
 		<TimelineItem
 			img="/research-icon.svg"
-			period="Jan 2022 - Present"
+			period="Jan 2022 - Sep 2022"
 			title="Researcher"
 		>
 			Performance comparative of surrogate models as fitness functions for
 			metaheuristic algorithms.
-			<br />DOI: TBD
+			<br />DOI: <a href="https://doi.org/10.1007/978-3-031-28999-6_9">
+				https://doi.org/10.1007/978-3-031-28999-6_9
+			</a>
 		</TimelineItem>
 		<TimelineItem
 			img="/research-icon.svg"
@@ -66,14 +84,17 @@ import Skill from "../components/Skill.astro";
 		>
 			A statistical and experimental comparison of meta-heuristic
 			evolutionary models for the CVRP.
-			<br />DOI: <a href="https://doi.org/10.1007/978-3-031-08266-5_10"
-				>https://doi.org/10.1007/978-3-031-08266-5_10</a
-			>
+			<br />DOI: <a href="https://doi.org/10.1007/978-3-031-08266-5_10">
+				https://doi.org/10.1007/978-3-031-08266-5_10
+			</a>
 		</TimelineItem>
 	</Timeline>
 	<Skills>
-		<Skill img="/python-original.svg" title="Python">
-			Data science, machine learning, and web development.
+		<Skill img="/csharp-original.svg" title="C#">
+			Backend and frontend development. ETL and services deployment.
+		</Skill>
+		<Skill img="/docker-original.svg" title="Docker	">
+			Dev environments. Services deployment and management.
 		</Skill>
 		<Skill img="/typescript-original.svg" title="Typescript">
 			Backend and frontend development.
@@ -83,6 +104,9 @@ import Skill from "../components/Skill.astro";
 		</Skill>
 		<Skill img="/nodejs-original.svg" title="Node.js">
 			Backend development and use of developer tooling.
+		</Skill>
+		<Skill img="/python-original.svg" title="Python">
+			Data science, machine learning, and web development.
 		</Skill>
 		<Skill img="/git-original.svg" title="Git">
 			Version control with git and platforms such as Github and GitLab.
